@@ -223,7 +223,7 @@ Model Random Forest menghasilkan akurasi sebesar:
 ## Feature Importance
 
 <p align="center">
-<img src="images/Gambar1.png" width="650">
+<img src="images/Image1.png" width="650">
 <br>
 <em>Gambar 4. Feature Importance Random Forest</em>
 </p>
