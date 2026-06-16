@@ -14,7 +14,7 @@ pinned: false
 
 Proyek ini bertujuan untuk mengklasifikasikan tingkat obesitas seseorang berdasarkan faktor gaya hidup menggunakan algoritma Machine Learning dengan metodologi **CRISP-DM**.
 
-🔗 **Live Demo:** [Link Hugging Face Space]
+🔗 **Live Demo:** [Link Hugging Face Space](https://huggingface.co/spaces/kibuu/Klasifikasi_Tingkat_Obesitas_Berdasarkan_Gaya_Hidup_Menggunakan_Algoritma_Random_Forest)
 
 📓 **Notebook:** [Link Google Colab]
 
