@@ -24,8 +24,8 @@ Proyek ini bertujuan untuk mengklasifikasikan tingkat obesitas seseorang berdasa
 
 | Nama | NIM |
 |-------|-----|
-| [Muhammad Fahmi] | [2330511082] |
-| [Indra] | [2330511069] |
+| Muhammad Fahmi | 2330511082 |
+| Indra | 2330511069 |
 
 
 ---
