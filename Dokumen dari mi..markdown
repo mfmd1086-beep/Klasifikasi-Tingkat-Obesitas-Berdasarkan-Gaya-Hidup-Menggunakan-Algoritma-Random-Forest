@@ -1,253 +1,297 @@
 ---
-title: Sleep Disorder Predictor
-emoji: 😴
-colorFrom: green
-colorTo: blue
+title: Obesity Level Classification
+emoji: 🏃
+colorFrom: blue
+colorTo: green
 sdk: streamlit
-sdk_version: 1.35.0
 app_file: app.py
 pinned: false
 ---
 
-# 😴 Prediksi Gangguan Tidur Berdasarkan Gaya Hidup
+# 🏃 Klasifikasi Tingkat Obesitas Berdasarkan Gaya Hidup
 
 ## 📌 Project Overview
-Proyek ini bertujuan memprediksi jenis gangguan tidur seseorang (None / Insomnia / Sleep Apnea) berdasarkan data gaya hidup dan kondisi kesehatan menggunakan algoritma machine learning dengan metodologi **CRISP-DM**.
+
+Proyek ini bertujuan untuk mengklasifikasikan tingkat obesitas seseorang berdasarkan faktor gaya hidup menggunakan algoritma Machine Learning dengan metodologi **CRISP-DM**.
 
 🔗 **Live Demo:** [Link Hugging Face Space]
+
 📓 **Notebook:** [Link Google Colab]
 
 ---
 
 ## 👥 Tim
+
 | Nama | NIM |
-|------|-----|
-| [Nama kamu] | [NIM kamu] |
+|-------|-----|
+| [Nama Anda] | [NIM Anda] |
 
 ---
 
 ## 📂 Struktur Repositori
-```
-├── app.py                              # Aplikasi Streamlit
-├── sleep_health_classification.ipynb  # Notebook CRISP-DM
-├── sleep_model.pkl                     # Model hasil training
-├── requirements.txt                    # Dependency
-├── images/                             # Folder screenshot hasil
-└── README.md                           # Laporan proyek
+
+```text
+├── app.py
+├── obesity_classification.ipynb
+├── model_obesity.pkl
+├── requirements.txt
+├── images/
+└── README.md
 ```
 
 ---
 
-## 1. Business Understanding
+# 1. Business Understanding
 
-### Latar Belakang
-Gangguan tidur seperti insomnia dan sleep apnea semakin umum di masyarakat modern. Kondisi ini berkaitan erat dengan gaya hidup seperti tingkat stres, aktivitas fisik, dan pola tidur. Deteksi dini dapat membantu seseorang segera mencari penanganan yang tepat sebelum berdampak lebih serius pada kesehatan.
+## Latar Belakang
 
-### Problem Statement
-> *Dapatkah kita memprediksi jenis gangguan tidur seseorang (None, Insomnia, Sleep Apnea) berdasarkan data gaya hidup dan kondisi kesehatan menggunakan algoritma machine learning?*
+Obesitas merupakan salah satu masalah kesehatan yang semakin meningkat di berbagai negara. Pola makan, aktivitas fisik, konsumsi air, serta kebiasaan sehari-hari memiliki pengaruh terhadap tingkat obesitas seseorang.
 
-### Goals
-- Membangun model klasifikasi untuk memprediksi jenis gangguan tidur
-- Mengidentifikasi faktor gaya hidup yang paling berpengaruh terhadap gangguan tidur
-- Men-deploy model sebagai aplikasi web interaktif
+Dengan memanfaatkan Machine Learning, model klasifikasi dapat dibangun untuk membantu mengidentifikasi tingkat obesitas berdasarkan gaya hidup seseorang.
 
-### Solution Statement
+---
+
+## Problem Statement
+
+> Dapatkah tingkat obesitas seseorang diklasifikasikan berdasarkan gaya hidup menggunakan algoritma Machine Learning?
+
+---
+
+## Goals
+
+- Membangun model klasifikasi tingkat obesitas.
+- Mengidentifikasi faktor gaya hidup yang mempengaruhi tingkat obesitas.
+- Mengembangkan aplikasi web interaktif berbasis Streamlit.
+
+---
+
+## Solution Statement
+
 - **Model Utama:** Random Forest Classifier
-- **Model Pembanding:** Gradient Boosting Classifier
-- **Metrik Evaluasi:** Accuracy, Precision, Recall, F1-Score
+- **Metrik Evaluasi:**
+  - Accuracy
+  - Precision
+  - Recall
+  - F1-Score
 
 ---
 
-## 2. Data Understanding
+# 2. Data Understanding
 
-### Sumber Data
-- **Dataset:** [Sleep Health and Lifestyle Dataset - Kaggle](https://www.kaggle.com/datasets/equilibriumm/sleep-health-and-lifestyle)
-- **Jumlah data:** 374 baris
-- **Jumlah fitur:** 13 kolom
+## Sumber Data
 
-### Deskripsi Fitur
-| Fitur | Tipe | Deskripsi |
-|-------|------|-----------|
-| `Gender` | kategorikal | Jenis kelamin |
-| `Age` | numerik | Usia dalam tahun |
-| `Occupation` | kategorikal | Jenis pekerjaan |
-| `Sleep Duration` | numerik | Durasi tidur per malam (jam) |
-| `Quality of Sleep` | numerik | Kualitas tidur skala 1-10 |
-| `Physical Activity Level` | numerik | Durasi aktivitas fisik (menit/hari) |
-| `Stress Level` | numerik | Tingkat stres skala 1-10 |
-| `BMI Category` | kategorikal | Kategori BMI |
-| `Blood Pressure` | string | Tekanan darah (sistolik/diastolik) |
-| `Heart Rate` | numerik | Detak jantung (bpm) |
-| `Daily Steps` | numerik | Jumlah langkah per hari |
-| `Sleep Disorder` | kategorikal | **Target** — None / Insomnia / Sleep Apnea |
+- Dataset : Obesity Levels Prediction Dataset
+- Sumber : Kaggle
+- Jumlah data : 2.111 baris
+- Jumlah fitur : 17 kolom
 
-### EDA Findings
-- Distribusi kelas target relatif seimbang antara None, Insomnia, dan Sleep Apnea
-- Stres level tinggi cenderung berkorelasi dengan gangguan tidur
-- Kualitas tidur dan durasi tidur berkorelasi positif
+Dataset dapat diakses melalui:
+
+https://www.kaggle.com/datasets/fatemehmehrparvar/obesity-levels
+
+---
+
+## Deskripsi Fitur
+
+| Fitur | Deskripsi |
+|---------|---------|
+| Gender | Jenis kelamin |
+| Age | Umur |
+| Height | Tinggi badan |
+| Weight | Berat badan |
+| family_history_with_overweight | Riwayat obesitas keluarga |
+| FAVC | Konsumsi makanan tinggi kalori |
+| FCVC | Konsumsi sayur |
+| NCP | Jumlah makan utama per hari |
+| CAEC | Kebiasaan ngemil |
+| SMOKE | Kebiasaan merokok |
+| CH2O | Konsumsi air |
+| SCC | Monitoring kalori |
+| FAF | Aktivitas fisik |
+| TUE | Penggunaan perangkat teknologi |
+| CALC | Konsumsi alkohol |
+| MTRANS | Transportasi |
+| NObeyesdad | Target klasifikasi |
+
+---
+
+## Kelas Target
+
+- Insufficient Weight
+- Normal Weight
+- Overweight Level I
+- Overweight Level II
+- Obesity Type I
+- Obesity Type II
+- Obesity Type III
+
+---
+
+## EDA Findings
+
+- Distribusi data target relatif seimbang.
+- Berat badan dan aktivitas fisik memiliki pengaruh besar terhadap tingkat obesitas.
+- Riwayat obesitas keluarga juga berkontribusi terhadap klasifikasi.
 
 <p align="center">
-  <img src="images/distribusi_sleep_disorder.png" width="600">
-  <br>
-  <em>Gambar 1. Distribusi Label Sleep Disorder</em>
+<img src="images/distribusi_obesity.png" width="650">
+<br>
+<em>Gambar 1. Distribusi Tingkat Obesitas</em>
 </p>
 
 <p align="center">
-  <img src="images/heatmap_korelasi.png" width="600">
-  <br>
-  <em>Gambar 2. Heatmap Korelasi Fitur Numerik</em>
-</p>
-
-<p align="center">
-  <img src="images/boxplot_stress.png" width="600">
-  <br>
-  <em>Gambar 3. Stress Level per Jenis Gangguan Tidur</em>
+<img src="images/heatmap_korelasi.png" width="650">
+<br>
+<em>Gambar 2. Heatmap Korelasi Fitur Numerik</em>
 </p>
 
 ---
 
-## 3. Data Preparation
+# 3. Data Preparation
 
-1. **Drop kolom tidak relevan:** `Person ID`
-2. **Handle missing values:** NaN pada `Sleep Disorder` diisi dengan `None` (tidak ada gangguan)
-3. **Feature engineering:** Kolom `Blood Pressure` dipecah menjadi `BP Systolic` dan `BP Diastolic`
-
-```python
-df_clean[['BP Systolic', 'BP Diastolic']] = df_clean['Blood Pressure'].str.split('/', expand=True).astype(int)
-```
-
-4. **Encoding:** Kolom kategorikal di-encode menggunakan LabelEncoder
+### Encoding Data Kategorikal
 
 ```python
 le = LabelEncoder()
-for col in ['Gender', 'Occupation', 'BMI Category']:
-    df_clean[col] = le.fit_transform(df_clean[col])
+
+for column in df.columns:
+    if df[column].dtype == 'object':
+        df[column] = le.fit_transform(df[column])
 ```
 
-5. **Split data:** 80% training, 20% testing dengan stratified split
+### Split Dataset
+
+80% data training dan 20% data testing.
 
 ```python
 X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.2, random_state=42, stratify=y
-)
-```
-
----
-
-## 4. Modeling
-
-### Model 1: Random Forest Classifier
-
-```python
-rf_model = RandomForestClassifier(
-    n_estimators=100,
-    max_depth=10,
-    random_state=42,
-    n_jobs=-1
-)
-rf_model.fit(X_train, y_train)
-```
-
-### Model 2: Gradient Boosting Classifier
-
-```python
-gb_model = GradientBoostingClassifier(
-    n_estimators=100,
-    max_depth=5,
+    X,
+    y,
+    test_size=0.2,
     random_state=42
 )
-gb_model.fit(X_train, y_train)
 ```
 
 ---
 
-## 5. Evaluation
+# 4. Modeling
 
-### Hasil Perbandingan Model
-| Model | Accuracy | Precision (avg) | Recall (avg) | F1-Score (avg) |
-|-------|----------|-----------------|--------------|----------------|
-| Random Forest | **96.00%** | 0.94 | 0.95 | 0.94 |
-| Gradient Boosting | 93.33% | 0.90 | 0.91 | 0.90 |
+## Random Forest Classifier
 
-Model **Random Forest** dipilih sebagai model terbaik dengan akurasi **96%** pada data uji.
+```python
+model = RandomForestClassifier(
+    n_estimators=100,
+    random_state=42
+)
 
-### Classification Report: Random Forest
-| Kelas | Precision | Recall | F1-Score | Support |
-|-------|-----------|--------|----------|---------|
-| Insomnia | 0.88 | 0.93 | 0.90 | 15 |
-| None | 1.00 | 0.98 | 0.99 | 44 |
-| Sleep Apnea | 0.94 | 0.94 | 0.94 | 16 |
-| **Weighted Avg** | **0.96** | **0.96** | **0.96** | **75** |
-
-### Confusion Matrix
-
-<p align="center">
-  <img src="images/confusion_matrix.png" width="700">
-  <br>
-  <em>Gambar 4. Confusion Matrix Random Forest vs Gradient Boosting</em>
-</p>
-
-### Feature Importance
-
-<p align="center">
-  <img src="images/feature_importance.png" width="600">
-  <br>
-  <em>Gambar 5. Feature Importance - Random Forest</em>
-</p>
-
-Fitur paling berpengaruh terhadap prediksi gangguan tidur:
-1. [Isi fitur teratas dari grafik]
-2. [Isi fitur kedua]
-3. [Isi fitur ketiga]
-
-### Cross-Validation (5-Fold)
-
+model.fit(X_train, y_train)
 ```
-CV Scores : [0.680, 0.693, 0.960, 0.533, 0.838]
-Mean Accuracy : 0.7409 ± 0.1459
-```
-
-> 📝 **Catatan:** Variasi CV score yang cukup tinggi disebabkan oleh ukuran dataset yang relatif kecil (374 data), sehingga setiap fold memiliki distribusi data yang berbeda-beda. Hasil test accuracy sebesar 96% tetap valid karena menggunakan stratified split yang memastikan proporsi kelas seimbang.
 
 ---
 
-## 6. Deployment
+# 5. Evaluation
 
-Model di-deploy menggunakan **Streamlit** di **Hugging Face Spaces**.
+## Accuracy
 
-### Tampilan Aplikasi
+Model Random Forest menghasilkan akurasi sebesar:
+
+### **97%**
+
+---
+
+## Classification Report
+
+| Metric | Value |
+|----------|------|
+| Accuracy | 97% |
+| Precision | 97% |
+| Recall | 97% |
+| F1-Score | 97% |
+
+---
+
+## Confusion Matrix
 
 <p align="center">
-  <img src="images/tampilan_app.png" width="700">
-  <br>
-  <em>Gambar 6. Tampilan Aplikasi Sleep Disorder Predictor</em>
+<img src="images/confusion_matrix.png" width="700">
+<br>
+<em>Gambar 3. Confusion Matrix</em>
 </p>
 
-### Cara Menjalankan Lokal
+---
+
+## Feature Importance
+
+<p align="center">
+<img src="images/feature_importance.png" width="650">
+<br>
+<em>Gambar 4. Feature Importance Random Forest</em>
+</p>
+
+Fitur yang paling berpengaruh:
+
+1. Weight
+2. Height
+3. Age
+4. FAF
+5. FCVC
+
+---
+
+# 6. Deployment
+
+Model dideploy menggunakan:
+
+- Streamlit
+- Hugging Face Spaces
+
+---
+
+## Tampilan Aplikasi
+
+<p align="center">
+<img src="images/tampilan_app.png" width="700">
+<br>
+<em>Gambar 5. Tampilan Aplikasi Obesity Classification</em>
+</p>
+
+---
+
+## Menjalankan Secara Lokal
+
+Clone repository:
 
 ```bash
-# Clone repositori
-git clone [url repo]
-cd [nama repo]
+git clone [url repository]
+```
 
-# Install dependency
+Install dependency:
+
+```bash
 pip install -r requirements.txt
+```
 
-# Jalankan aplikasi
+Menjalankan aplikasi:
+
+```bash
 streamlit run app.py
 ```
+
+---
 
 🔗 **Live App:** [Link Hugging Face Space]
 
 ---
 
-## ⚠️ Disclaimer
-Hasil prediksi aplikasi ini **bukan merupakan diagnosis medis**. Selalu konsultasikan kondisi kesehatan Anda dengan tenaga medis profesional.
+# ⚠ Disclaimer
+
+Hasil prediksi yang dihasilkan oleh aplikasi ini hanya digunakan untuk tujuan edukasi dan penelitian, serta tidak dapat menggantikan diagnosis dari tenaga kesehatan profesional.
 
 ---
 
-## 📚 Referensi
-- [Sleep Health and Lifestyle Dataset - Kaggle](https://www.kaggle.com/datasets/equilibriumm/sleep-health-and-lifestyle)
-- [Scikit-learn Documentation](https://scikit-learn.org/)
-- [Streamlit Documentation](https://docs.streamlit.io/)
-- Breiman, L. (2001). Random Forests. *Machine Learning*, 45, 5–32.
+# 📚 Referensi
+
+1. Obesity Levels Prediction Dataset - Kaggle.
+2. Scikit-learn Documentation.
+3. Streamlit Documentation.
+4. Breiman, L. (2001). Random Forests. Machine Learning, 45(1), 5–32.
