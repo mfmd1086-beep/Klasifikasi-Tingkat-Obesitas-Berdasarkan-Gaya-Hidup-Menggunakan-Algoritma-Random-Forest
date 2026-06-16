@@ -16,7 +16,7 @@ Proyek ini bertujuan untuk mengklasifikasikan tingkat obesitas seseorang berdasa
 
 🔗 **Live Demo:** [Link Hugging Face Space](https://huggingface.co/spaces/kibuu/Klasifikasi_Tingkat_Obesitas_Berdasarkan_Gaya_Hidup_Menggunakan_Algoritma_Random_Forest)
 
-📓 **Notebook:** [Link Google Colab]
+📓 **Notebook:** [Link Google Colab](https://colab.research.google.com/drive/1W3DL_dKhVpKhhiXNcNIv1SgC12XVOYBQ?usp=sharing)
 
 ---
 
