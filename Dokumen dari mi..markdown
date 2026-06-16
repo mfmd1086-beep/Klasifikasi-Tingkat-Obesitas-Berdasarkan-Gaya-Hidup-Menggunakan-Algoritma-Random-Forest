@@ -250,7 +250,7 @@ Model dideploy menggunakan:
 ## Tampilan Aplikasi
 
 <p align="center">
-<img src="images/tampilan_app.png" width="700">
+<img src="images/Screenshot 2026-06-16 132314.png" width="700">
 <br>
 <em>Gambar 5. Tampilan Aplikasi Obesity Classification</em>
 </p>
