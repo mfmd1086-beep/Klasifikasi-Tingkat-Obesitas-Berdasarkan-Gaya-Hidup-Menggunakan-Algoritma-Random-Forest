@@ -281,7 +281,7 @@ streamlit run app.py
 
 ---
 
-🔗 **Live App:** [Link Hugging Face Space]
+🔗 **Live App:** [Link Hugging Face Space](https://huggingface.co/spaces/kibuu/Klasifikasi_Tingkat_Obesitas_Berdasarkan_Gaya_Hidup_Menggunakan_Algoritma_Random_Forest)
 
 ---
 
