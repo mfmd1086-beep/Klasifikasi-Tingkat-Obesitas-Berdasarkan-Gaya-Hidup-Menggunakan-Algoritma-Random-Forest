@@ -134,13 +134,13 @@ https://www.kaggle.com/datasets/fatemehmehrparvar/obesity-levels
 - Riwayat obesitas keluarga juga berkontribusi terhadap klasifikasi.
 
 <p align="center">
-<img src="images/distribusi_obesity.png" width="650">
+<img src="images/obesity.png" width="650">
 <br>
 <em>Gambar 1. Distribusi Tingkat Obesitas</em>
 </p>
 
 <p align="center">
-<img src="images/heatmap_korelasi.png" width="650">
+<img src="images/kolerasi.png" width="650">
 <br>
 <em>Gambar 2. Heatmap Korelasi Fitur Numerik</em>
 </p>
@@ -213,7 +213,7 @@ Model Random Forest menghasilkan akurasi sebesar:
 ## Confusion Matrix
 
 <p align="center">
-<img src="images/confusion_matrix.png" width="700">
+<img src="images/matrix.png" width="700">
 <br>
 <em>Gambar 3. Confusion Matrix</em>
 </p>
