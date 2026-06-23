@@ -54,12 +54,6 @@ Berdasarkan latar belakang yang telah dijelaskan, obesitas merupakan masalah kes
 
 Permasalahan yang akan diselesaikan dalam penelitian ini adalah bagaimana membangun model Machine Learning yang mampu mengklasifikasikan tingkat obesitas seseorang berdasarkan faktor gaya hidup seperti usia, berat badan, tinggi badan, aktivitas fisik, pola makan, konsumsi air, serta kebiasaan sehari-hari lainnya. Selain itu, penelitian ini juga bertujuan untuk mengetahui seberapa baik performa algoritma Random Forest dalam melakukan klasifikasi tingkat obesitas dan mengidentifikasi faktor-faktor yang paling berpengaruh terhadap hasil klasifikasi.
 
-Secara rinci, rumusan masalah dalam penelitian ini adalah sebagai berikut:
-
-Bagaimana membangun model klasifikasi tingkat obesitas berdasarkan faktor gaya hidup menggunakan algoritma Random Forest?
-Seberapa baik performa model Random Forest dalam mengklasifikasikan tingkat obesitas berdasarkan metrik Accuracy, Precision, Recall, dan F1-Score?
-Faktor gaya hidup apa saja yang memiliki pengaruh paling besar terhadap tingkat obesitas seseorang?
-Bagaimana mengimplementasikan model klasifikasi tersebut ke dalam aplikasi berbasis web yang dapat digunakan secara interaktif oleh pengguna?
 ---
 
 ## Goals
