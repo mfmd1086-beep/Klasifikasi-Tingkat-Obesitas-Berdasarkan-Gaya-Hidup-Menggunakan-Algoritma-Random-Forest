@@ -50,7 +50,7 @@ Berdasarkan permasalahan tersebut, penelitian ini bertujuan untuk membangun mode
 
 ## Problem Statement
 
-> Berdasarkan latar belakang yang telah dijelaskan, obesitas merupakan masalah kesehatan yang dipengaruhi oleh berbagai faktor gaya hidup yang saling berkaitan. Banyaknya faktor yang mempengaruhi tingkat obesitas menyebabkan proses identifikasi menjadi lebih kompleks apabila dilakukan secara manual. Oleh karena itu, diperlukan suatu pendekatan yang mampu menganalisis data secara efektif dan menghasilkan klasifikasi tingkat obesitas dengan tingkat akurasi yang baik.
+Berdasarkan latar belakang yang telah dijelaskan, obesitas merupakan masalah kesehatan yang dipengaruhi oleh berbagai faktor gaya hidup yang saling berkaitan. Banyaknya faktor yang mempengaruhi tingkat obesitas menyebabkan proses identifikasi menjadi lebih kompleks apabila dilakukan secara manual. Oleh karena itu, diperlukan suatu pendekatan yang mampu menganalisis data secara efektif dan menghasilkan klasifikasi tingkat obesitas dengan tingkat akurasi yang baik.
 
 Permasalahan yang akan diselesaikan dalam penelitian ini adalah bagaimana membangun model Machine Learning yang mampu mengklasifikasikan tingkat obesitas seseorang berdasarkan faktor gaya hidup seperti usia, berat badan, tinggi badan, aktivitas fisik, pola makan, konsumsi air, serta kebiasaan sehari-hari lainnya. Selain itu, penelitian ini juga bertujuan untuk mengetahui seberapa baik performa algoritma Random Forest dalam melakukan klasifikasi tingkat obesitas dan mengidentifikasi faktor-faktor yang paling berpengaruh terhadap hasil klasifikasi.
 
