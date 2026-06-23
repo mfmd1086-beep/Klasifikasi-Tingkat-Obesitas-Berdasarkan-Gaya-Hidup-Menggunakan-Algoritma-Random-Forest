@@ -1,12 +1,3 @@
----
-title: Obesity Level Classification
-emoji: 🏃
-colorFrom: blue
-colorTo: green
-sdk: streamlit
-app_file: app.py
-pinned: false
----
 
 # 🏃 Klasifikasi Tingkat Obesitas Berdasarkan Gaya Hidup
 
@@ -47,16 +38,28 @@ Proyek ini bertujuan untuk mengklasifikasikan tingkat obesitas seseorang berdasa
 
 ## Latar Belakang
 
-Obesitas merupakan salah satu masalah kesehatan yang semakin meningkat di berbagai negara. Pola makan, aktivitas fisik, konsumsi air, serta kebiasaan sehari-hari memiliki pengaruh terhadap tingkat obesitas seseorang.
+Obesitas merupakan salah satu masalah kesehatan global yang terus meningkat dari tahun ke tahun. Kondisi ini terjadi akibat penumpukan lemak tubuh yang berlebihan sehingga dapat meningkatkan risiko berbagai penyakit kronis seperti diabetes melitus, hipertensi, penyakit jantung, stroke, dan gangguan metabolisme lainnya. Selain berdampak pada kesehatan fisik, obesitas juga dapat mempengaruhi kualitas hidup seseorang, baik dari segi psikologis maupun sosial.
 
-Dengan memanfaatkan Machine Learning, model klasifikasi dapat dibangun untuk membantu mengidentifikasi tingkat obesitas berdasarkan gaya hidup seseorang.
+Tingkat obesitas seseorang dipengaruhi oleh berbagai faktor, seperti pola makan, aktivitas fisik, kebiasaan mengonsumsi makanan tinggi kalori, konsumsi air putih, riwayat obesitas dalam keluarga, serta gaya hidup sehari-hari. Perubahan gaya hidup masyarakat modern yang cenderung kurang aktif secara fisik dan lebih sering mengonsumsi makanan cepat saji menjadi salah satu penyebab meningkatnya angka obesitas di berbagai negara.
+
+Seiring berkembangnya teknologi informasi dan ilmu data, Machine Learning dapat dimanfaatkan untuk membantu menganalisis pola hubungan antara gaya hidup dan tingkat obesitas seseorang. Dengan memanfaatkan data historis yang berisi berbagai faktor gaya hidup, model Machine Learning dapat dilatih untuk mengenali pola tertentu dan melakukan klasifikasi tingkat obesitas secara otomatis. Hasil klasifikasi ini diharapkan dapat menjadi informasi awal yang membantu individu dalam memahami kondisi kesehatannya sehingga dapat mengambil langkah pencegahan maupun perbaikan gaya hidup lebih dini.
+
+Berdasarkan permasalahan tersebut, penelitian ini bertujuan untuk membangun model klasifikasi tingkat obesitas berdasarkan faktor gaya hidup menggunakan algoritma Random Forest. Algoritma ini dipilih karena memiliki kemampuan yang baik dalam menangani data klasifikasi multikelas, mampu mengolah banyak atribut sekaligus, serta menghasilkan performa yang tinggi dalam berbagai kasus klasifikasi.
 
 ---
 
 ## Problem Statement
 
-> Dapatkah tingkat obesitas seseorang diklasifikasikan berdasarkan gaya hidup menggunakan algoritma Machine Learning?
+> Berdasarkan latar belakang yang telah dijelaskan, obesitas merupakan masalah kesehatan yang dipengaruhi oleh berbagai faktor gaya hidup yang saling berkaitan. Banyaknya faktor yang mempengaruhi tingkat obesitas menyebabkan proses identifikasi menjadi lebih kompleks apabila dilakukan secara manual. Oleh karena itu, diperlukan suatu pendekatan yang mampu menganalisis data secara efektif dan menghasilkan klasifikasi tingkat obesitas dengan tingkat akurasi yang baik.
 
+Permasalahan yang akan diselesaikan dalam penelitian ini adalah bagaimana membangun model Machine Learning yang mampu mengklasifikasikan tingkat obesitas seseorang berdasarkan faktor gaya hidup seperti usia, berat badan, tinggi badan, aktivitas fisik, pola makan, konsumsi air, serta kebiasaan sehari-hari lainnya. Selain itu, penelitian ini juga bertujuan untuk mengetahui seberapa baik performa algoritma Random Forest dalam melakukan klasifikasi tingkat obesitas dan mengidentifikasi faktor-faktor yang paling berpengaruh terhadap hasil klasifikasi.
+
+Secara rinci, rumusan masalah dalam penelitian ini adalah sebagai berikut:
+
+Bagaimana membangun model klasifikasi tingkat obesitas berdasarkan faktor gaya hidup menggunakan algoritma Random Forest?
+Seberapa baik performa model Random Forest dalam mengklasifikasikan tingkat obesitas berdasarkan metrik Accuracy, Precision, Recall, dan F1-Score?
+Faktor gaya hidup apa saja yang memiliki pengaruh paling besar terhadap tingkat obesitas seseorang?
+Bagaimana mengimplementasikan model klasifikasi tersebut ke dalam aplikasi berbasis web yang dapat digunakan secara interaktif oleh pengguna?
 ---
 
 ## Goals
